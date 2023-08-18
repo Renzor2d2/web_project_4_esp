@@ -1,0 +1,22 @@
+.profile-info__title {
+  font-size:1.375rem;
+  font-weight: 500;
+  line-height:3.500rem;
+  letter-spacing: 0em;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .profile-info__title {
+    font-size:2.500rem;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .profile-info__title {
+    font-size:2.625rem;
+    max-width: 85%;
+  }
+}

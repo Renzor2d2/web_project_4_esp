@@ -1,0 +1,7 @@
+.input{
+  row-gap:1.250rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  padding:0;
+}

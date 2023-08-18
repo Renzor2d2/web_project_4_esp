@@ -1,0 +1,10 @@
+.popup-container{
+  max-width:70%;  
+  background-color:white;
+  padding:1.250rem;
+  border-radius: 3%;
+  display:flex;
+  flex-direction: column;
+  row-gap:2.188rem;
+
+}

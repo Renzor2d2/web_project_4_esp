@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img src="images/Aroundtheus.png" alt="logotipo" />
+        <img class="line" src="images/Line.png" alt="line" />
+      </header>
+
+      <main class="main">
+        <section class="profile">
+          <img
+            class="profile-image"
+            src="images/JacquesCostuo.jpg"
+            alt="foto de perfil"
+          />
+          <div class="profile-info">
+            <h2 class="profile-info__title">Jacques Cousteau</h2>
+            <img
+              class="profile-info__button"
+              src="images/Edit Button.png"
+              alt=""
+            />
+            <h3 class="profile-info__subtitle">Explorer</h3>
+          </div>
+          <button class="profile-info__button-add">+</button>
+          <!-- <img
+            class="profile-info__button-add"
+            src="images/Add Button.png"
+            alt="add-button"
+          /> -->
+        </section>
+        <section class="elements">
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/Valle-yosimet.png"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Valle de Yosemite</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/moraine-lake.jpg"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Lago Louise</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/Montañas-calvas.png"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Montañas Calvas</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/vanoise-national.jpg"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Vanoise National</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/latemar.jpg"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Latemar</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+          <article class="element-card">
+            <div class="element__container-one">
+              <img
+                class="element-card__trash"
+                src="images/Trash.png"
+                alt="trash"
+              />
+              <img
+                class="element-card__image"
+                src="images/Lago-di-Braies.jpg"
+                alt=""
+              />
+            </div>
+            <div class="element__container">
+              <h2 class="element-card__title">Lago di Braise</h2>
+              <img class="element-card__heart" src="images/heart.svg" alt="" />
+            </div>
+          </article>
+        </section>
+
+        <div class="popup popup_oppened">
+          <button class="popup__close-icon">x</button>
+          <!-- <img
+            class="popup__close-icon"
+            src="images/Close Icon.png"
+            alt="close"
+          /> -->
+          <form class="popup-container">
+            <h2 class="popup-container__title">Editar Perfil</h2>
+            <fieldset class="input">
+              <input
+                class="input__name"
+                type="text"
+                placeholder="Nombre"
+                value="Jacques Cousteau"
+              />
+              <input
+                class="input__job"
+                type="text"
+                placeholder="Acerca de mi"
+                value="Explorer"
+              />
+              <input type="submit" class="popup-container__submit" value="crear" />
+            </fieldset>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">© 2020 Mesto Russia</footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
