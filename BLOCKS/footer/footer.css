@@ -1,7 +1,7 @@
 .footer {
-  margin: 2.188rem auto 0 auto;
+  margin: 2.188rem auto 2.188rem auto;
   display:flex;
-  justify-content:flex-start;
+  justify-content:flex-start; 
 }
 @media screen and (min-width: 520px) {
   .footer {

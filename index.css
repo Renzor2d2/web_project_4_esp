@@ -25,13 +25,15 @@
 @import url(./BLOCKS/elements/element-card/__title/element-card__title.css);
 @import url(./BLOCKS/elements/element-card/__trash/element-card__trash.css);
 
-@import url(./BLOCKS/popup/popup.css);
-@import url(./BLOCKS/popup/__close-icon/popup__close-icon.css);
-@import url(./BLOCKS/popup/_oppened/popup_oppened.css);
-@import url(./BLOCKS/popup/popup-container/popup-container.css);
-@import url(./BLOCKS/popup/popup-container/__title/popup-container__title.css);
-@import url(./BLOCKS/popup/popup-container/__submit/popup-container__submit.css);
-@import url(./BLOCKS/popup/popup-container/__input/input.css);
-@import url(./BLOCKS/popup/popup-container/__input/__job/input__job.css);
-@import url(./BLOCKS/popup/popup-container/__input/__name/input__name.css);
+@import url(./BLOCKS/form/form.css);
+@import url(./BLOCKS/form/popup/popup.css);
+@import url(./BLOCKS/form/popup/__close-icon/popup__close-icon.css);
+@import url(./BLOCKS/form/popup/_oppened/popup_oppened.css);
+@import url(./BLOCKS/form/popup/popup-container/popup-container.css);
+@import url(./BLOCKS/form/popup/popup-container/__input/input.css);
+@import url(./BLOCKS/form/popup/popup-container/__input/__job/input__job.css);
+@import url(./BLOCKS/form/popup/popup-container/__input/__name/input__name.css);
+@import url(./BLOCKS/form/popup/popup-container/__submit/popup-container__submit.css);
+@import url(./BLOCKS/form/popup/popup-container/__title/popup-container__title.css);
+
 @import url(./BLOCKS/footer/footer.css);

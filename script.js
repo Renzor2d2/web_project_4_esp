@@ -4,19 +4,28 @@ let popupOpen = popup.querySelector(".popup_oppened");
 let popupContainer = popup.querySelector(".popup-container");
 let submitButton = popupContainer.querySelector(".popup-container__submit");
 let closeIcon = popup.querySelector(".popup__close-icon");
-let page=document.querySelector(".page");
+let page = document.querySelector(".page");
+
+// let header = document.querySelector(".header");
+// let main = document.querySelector(".main");
+// let footer = document.querySelector(".footer");
 
 function open() {
   popup.classList.remove("popup_oppened");
-  page.setAttribute("style","opacity:0.5");
-  popup.setAttribute("style","opacity:1");
+  page.setAttribute("style", "opacity:0.5");
+  // header.setAttribute("style", "opacity:0.5");
+  // main.setAttribute("style", "opacity:0.5");
+  // footer.setAttribute("style", "opacity:0.5");
 }
 
 profileButton.addEventListener("click", open);
 
 function close() {
   popup.classList.add("popup_oppened");
-  page.removeAttribute("style","opacity:.5")
+  page.removeAttribute("style", "opacity:0.5");
+  // header.removeAttribute("style", "opacity:0.5");
+  // main.removeAttribute("style", "opacity:0.5");
+  // footer.removeAttribute("style", "opacity:0.5");
 }
 
 closeIcon.addEventListener("click", close);
