@@ -24,8 +24,8 @@ En este proyecto se creó una página interactiva en la que los usuarios pueden 
 Toda la maquetación y estructura del proyecto se realizo en el editor de código [Visual estudio Code](https://code.visualstudio.com/).
 Se utilizaron los siguientes lenguajes:
 
--HTML
--CSS
--JAVASCRIPT
+- HTML
+- CSS
+- JAVASCRIPT
 
 [Enlace a Git](https://github.com/Renzor2d2).
