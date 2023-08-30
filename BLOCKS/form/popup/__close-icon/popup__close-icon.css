@@ -1,10 +1,10 @@
-.popup__close-icon{
-	width:3.125rem;
+.popup__close-icon {
+	width: 3.125rem;
 	align-self: flex-end;
-	color:white;
-	background-color:transparent;
-	border:0;
-	font-size:3.125rem;
+	color: white;
+	background-color: transparent;
+	border: 0;
+	font-size: 3.125rem;
 	font-weight: 100;
-  margin:0 1.563rem 0 0 ;
-	}
+	margin: 0 1.563rem 0 0;
+}

@@ -1,15 +1,14 @@
 .header {
-  width: 70%;
+  width: 85%;
   margin: 30px auto auto auto;
 }
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 520px) {
   .header {
-    width: 55%;
+    max-width: 60%;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .header {
-    width: 70%;
+    max-width: 65%;
   }
 }
