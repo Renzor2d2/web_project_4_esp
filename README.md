@@ -17,14 +17,17 @@
 
 **Imágenes**
 
-## A la hora de trabajar, debes optar por exportar las imágenes directamente desde Figma; te recomendamos hacerlo para practicar más. No olvides optimizarlas [aquí](https://tinypng.com/), para que tu proyecto cargue más rápido.
+A la hora de trabajar, debes optar por exportar las imágenes directamente desde Figma; te recomendamos hacerlo para practicar más. No olvides optimizarlas [aquí](https://tinypng.com/), para que tu proyecto cargue más rápido.
 
 En este proyecto se creó una página interactiva en la que los usuarios pueden añadir, eliminar o dar "me gusta" a las fotos.
 
 Toda la maquetación y estructura del proyecto se realizo en el editor de código [Visual estudio Code](https://code.visualstudio.com/).
 Se utilizaron los siguientes lenguajes:
-*HTML
-*CSS
+
+\*HTML
+
+\*CSS
+
 \*JAVASCRIPT
 
 [Enlace a Git](https://github.com/Renzor2d2)
