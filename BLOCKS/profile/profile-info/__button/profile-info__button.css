@@ -1,12 +1,14 @@
 .profile-info__button {
-	width: 1.125rem;
-	height: 1.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
 }
+
 @media screen and (min-width: 900px) {
-	.profile-info__button {
-		margin: 0;
-	}
-	.profile-info__button:hover {
-		opacity: 0.5;
-	}
+  .profile-info__button {
+    margin: 0;
+  }
+
+  .profile-info__button:hover {
+    opacity: 0.5;
+  }
 }
