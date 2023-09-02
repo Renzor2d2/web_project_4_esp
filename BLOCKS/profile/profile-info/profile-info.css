@@ -11,6 +11,7 @@
   .profile-info {
     margin: 0 0.938rem 0 0.938rem;
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     max-width: 60%;
 
