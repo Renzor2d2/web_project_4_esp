@@ -62,33 +62,38 @@ const initialCards = [
 		name: "Valle de Yosemite",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 	{
 		name: "Lago Louise",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 	{
 		name: "Montañas Calvas",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
 		trash: "images/Trash.png",
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 	{
 		name: "Latemar",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
-
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 	{
 		name: "Parque Nacional de la Vanoise",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 	{
 		name: "Lago di Braies",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
 		id: "cardTrash",
+		idCard: "remove-card",
 	},
 ];
 
@@ -96,44 +101,72 @@ const element = document.querySelector(".element");
 const cardTitle = document.querySelector(".element-card__title");
 const cardImage = document.querySelector(".element-card__image");
 const elementCard = document.querySelector(".element-card");
-const template = document.getElementById("template-cards").content;
-const fragment = document.createDocumentFragment();
+// const template = document.getElementById("template-cards").content;
+// const fragment = document.createDocumentFragment();
 
 // agregando las cards
 initialCards.forEach(function (item) {
-	template.querySelector(".element-card");
-	template.querySelector(".element-card__title").textContent = item.name;
-	template.querySelector(".element-card__image").setAttribute("src", item.link);
-	template.querySelector(".element-card__trash").setAttribute("id", item.id);
-	let clone = document.importNode(template, true);
-	fragment.appendChild(clone);
+	// template.querySelector(".element-card");
+	// template.querySelector(".element-card__title").textContent = item.name;
+	// template.querySelector(".element-card__image").setAttribute("src", item.link);
+	// template.querySelector(".element-card__trash").setAttribute("id", item.id);
+	// template.querySelector(".element-card").setAttribute("id", item.idCard);
+	// let clone = document.importNode(template, true);
+	// fragment.appendChild(clone);
+	const initialCard = addCard(item.name, item.link);
+	element.append(initialCard);
 });
-element.appendChild(fragment);
+// element.appendChild(fragment);
 
 // agregando la carta personalizada
-function addCard(evt) {
-	evt.preventDefault();
-	const addFragment = document.createDocumentFragment();
-	let addClone = document.importNode(template, true);
-	addFragment.appendChild(addClone);
-	element.prepend(addFragment);
-	const titleInput = document.querySelector(".input__title");
-	const imageInput = document.querySelector(".input__image");
-	const addCardTitle = document.getElementById("addCardTitle");
-	const addCardImage = document.getElementById("addCardImage");
-	addCardTitle.textContent = titleInput.value;
-	addCardImage.src = imageInput.value;
+function addCard(title, image) {
+	const newCard = document
+		.querySelector("#template-cards")
+		.cloneNode(true)
+		.content.querySelector(".element-card");
+	console.log(newCard);
+	const titleCard = newCard.querySelector(".element-card__title");
+	titleCard.textContent = title;
+	const imageCard = newCard.querySelector(".element-card__image");
+	imageCard.src = image;
+	const trashButton = newCard.querySelector(".element-card__trash");
+	trashButton.addEventListener("click", function () {
+		newCard.remove();
+	});
+	const likeButton = newCard.querySelector(".element-card__heart");
+	likeButton.addEventListener("click", function () {
+		likeButton.classList.toggle();
+	});
+	// const addFragment = document.createDocumentFragment();
+	// let addClone = document.importNode(template, true);
+	// addFragment.appendChild(addClone);
+
+	// const titleInput = document.querySelector(".input__title");
+	// const imageInput = document.querySelector(".input__image");
+	// const addCardTitle = document.getElementById("addCardTitle");
+	// const addCardImage = document.getElementById("addCardImage");
+	// addCardTitle.textContent = titleInput.value;
+	// addCardImage.src = imageInput.value;
+	return newCard;
 }
-addPopup.addEventListener("submit", addCard);
+
+const titleInput = document.querySelector(".input__title");
+const imageInput = document.querySelector(".input__image");
+addPopup.addEventListener("submit", function (evt) {
+	evt.preventDefault();
+	const cardCreated = addCard(titleInput.value, imageInput.value);
+	element.prepend(cardCreated);
+});
 submitButtonForm.addEventListener("click", closeAddForm);
 
 //BOORANDO LA CARD
 //funcion para borrarlo
-const removeCard = document.getElementById("remove-card");
-function deleteCard() {
-	removeCard.remove();
-}
 
-const cardTrash = document
-	.getElementById("cardTrash")
-	.addEventListener("click", deleteCard);
+// const removeCard = document.getElementById("remove-card");
+// function deleteCard() {
+// 	removeCard.remove();
+// }
+
+// const cardTrash = document
+// 	.getElementById("cardTrash")
+// 	.addEventListener("click", deleteCard);
