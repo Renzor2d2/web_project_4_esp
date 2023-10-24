@@ -131,11 +131,9 @@ submitButtonForm.addEventListener("click", closeAddForm);
 //funcion para borrarlo
 const removeCard = document.getElementById("remove-card");
 function deleteCard() {
-	// removeCard.remove();
-	console.log(element.removeChild(removeCard));
+	removeCard.remove();
 }
 
 const cardTrash = document
 	.getElementById("cardTrash")
 	.addEventListener("click", deleteCard);
-console.log(template.children);
