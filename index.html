@@ -28,68 +28,22 @@
             </div>
             <button class="profile__button-add">+</button>
           </section>
-          <section class="element">
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/Valle-yosimet.png" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Valle de Yosemite</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/moraine-lake.jpg" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Lago Louise</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/Montañas-calvas.png" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Montañas Calvas</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/vanoise-national.jpg" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Vanoise National</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/latemar.jpg" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Latemar</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
-            <article class="element-card">
-              <div class="element-card__container-one">
-                <img class="element-card__trash" src="images/Trash.png" alt="trash">
-                <img class="element-card__image" src="images/Lago-di-Braies.jpg" alt="landscape">
-              </div>
-              <div class="element-card__container">
-                <h2 class="element-card__title">Lago di Braise</h2>
-                <img class="element-card__heart" src="images/heart.svg" alt="heart">
-              </div>
-            </article>
+
+          <section id="main-element" class="element">
+            <template id="template-cards">
+              <article id="remove-card" class="element-card">
+                <div class="element-card__container-one">
+                  <img src="images/Trash.png" class="element-card__trash" alt="trash">
+                  <img id="addCardImage" class="element-card__image" alt="landscape">
+                </div>
+                <div class="element-card__container">
+                  <h2 id="addCardTitle" class="element-card__title"></h2>
+                  <img class="element-card__heart" src="images/heart.svg" alt="heart">
+                </div>
+              </article>
+            </template>
           </section>
+
         </main>
         <footer class="footer">© 2020 Mesto Russia</footer>
       </div>
@@ -102,6 +56,19 @@
               <input class="input__name" type="text" placeholder="Nombre" value="Jacques Cousteau">
               <input class="input__job" type="text" placeholder="Acerca de mi" value="Explorer">
               <input type="submit" class="input__submit" value="Crear">
+            </fieldset>
+          </form>
+        </section>
+      </div>
+      <div class="addform">
+        <section class="addpopup addpopup_oppened">
+          <button class="addpopup__close-icon">x</button>
+          <form class="addpopup-container">
+            <h2 class="addpopup-container__title">Nuevo lugar</h2>
+            <fieldset class="input">
+              <input class="input__title" type="text" placeholder="Titulo">
+              <input class="input__image" type="text" placeholder="Imagen url">
+              <input type="submit" class="input__submit-form" value="Crear">
             </fieldset>
           </form>
         </section>
