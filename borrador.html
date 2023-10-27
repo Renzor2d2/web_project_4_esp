@@ -96,3 +96,55 @@ deletecards.forEach((item) => {
 cardTrash.addEventListener("click", deleteCard);
 });
 console.log(deletecards);
+
+
+
+
+
+
+
+
+const cardImage = newCard.querySelector(".element-card__image");
+cardImage.addEventListener("click", () => {
+function addEmergeWindow(imageEmerge) {
+const newEmergent = document
+.querySelector("#template-emergent")
+.cloneNode(true)
+.content.querySelector(".popup-emergent");
+console.log(newEmergent);
+const imageEmergent = newEmergent.querySelector(".popup-emergent__image");
+imageEmergent.src = imageEmerge;
+
+return newEmergent;
+}
+});
+
+///ventana emergente
+
+// function addEmergeWindow(imageEmerge) {
+// const newEmergent = document
+// .querySelector("#template-emergent")
+// .cloneNode(true)
+// .content.querySelector(".popup-emergent");
+// console.log(newEmergent);
+// const imageEmergent = newEmergent.querySelector(".popup-emergent__image");
+// imageEmergent.src = imageEmerge;
+
+// return newEmergent;
+// }
+// const popupEmergent = document.querySelector(".popup-emergent");
+// const popupEmergentOpen = popupEmergent.querySelector(".popup-emergent_open");
+// const cardImage = document.querySelector(".element-card__image");
+// const closeEmergentv = popupEmergent.querySelector(".popup-emergent_close");
+
+// function openEmergent() {
+// popupEmergent.classList.remove("popup-emergent_open");
+// }
+
+// cardImage.addEventListener("click", openEmergent);
+
+// function closeEmergent() {
+// popupEmergent.classList.add("popup-emergent_open");
+// }
+
+// closeEmergentv.addEventListener("click", closeEmergent);

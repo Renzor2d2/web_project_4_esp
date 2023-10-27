@@ -47,4 +47,6 @@
 @import url(./BLOCKS/addform/addpopup/addpopup-container/input/__title/input__title.css);
 @import url(./BLOCKS/addform/addpopup/addpopup-container/input/__submit-form/input__submit-form.css);
 
+@import url(./BLOCKS/addEmergent/addEmergent.css);
+
 @import url(./BLOCKS/footer/footer.css);

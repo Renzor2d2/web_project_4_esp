@@ -61,95 +61,100 @@ const initialCards = [
 	{
 		name: "Valle de Yosemite",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 	{
 		name: "Lago Louise",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 	{
 		name: "Montañas Calvas",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
 		trash: "images/Trash.png",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 	{
 		name: "Latemar",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 	{
 		name: "Parque Nacional de la Vanoise",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 	{
 		name: "Lago di Braies",
 		link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
-		id: "cardTrash",
-		idCard: "remove-card",
 	},
 ];
-
+const main = document.querySelector(".main");
 const element = document.querySelector(".element");
-const cardTitle = document.querySelector(".element-card__title");
-const cardImage = document.querySelector(".element-card__image");
 const elementCard = document.querySelector(".element-card");
-// const template = document.getElementById("template-cards").content;
-// const fragment = document.createDocumentFragment();
+// const cardTitle = document.querySelector(".element-card__title");
+// const cardImage = document.querySelector(".element-card__image");
 
 // agregando las cards
 initialCards.forEach(function (item) {
-	// template.querySelector(".element-card");
-	// template.querySelector(".element-card__title").textContent = item.name;
-	// template.querySelector(".element-card__image").setAttribute("src", item.link);
-	// template.querySelector(".element-card__trash").setAttribute("id", item.id);
-	// template.querySelector(".element-card").setAttribute("id", item.idCard);
-	// let clone = document.importNode(template, true);
-	// fragment.appendChild(clone);
 	const initialCard = addCard(item.name, item.link);
 	element.append(initialCard);
 });
-// element.appendChild(fragment);
+//
 
-// agregando la carta personalizada
 function addCard(title, image) {
+	//
+
+	// const emergentCard = document
+	// 	.querySelector("#template-emergent")
+	// 	.cloneNode(true)
+	// 	.content.querySelector(".addEmergent");
+	// const emergeImage = emergentCard.querySelector(".addEmergent__image");
+	// emergeImage.src = image;
+
+	//
 	const newCard = document
 		.querySelector("#template-cards")
 		.cloneNode(true)
 		.content.querySelector(".element-card");
-	console.log(newCard);
+	// console.log(newCard);
+
 	const titleCard = newCard.querySelector(".element-card__title");
 	titleCard.textContent = title;
 	const imageCard = newCard.querySelector(".element-card__image");
 	imageCard.src = image;
+
+	///
 	const trashButton = newCard.querySelector(".element-card__trash");
-	trashButton.addEventListener("click", function () {
+	trashButton.addEventListener("click", () => {
 		newCard.remove();
 	});
 	const likeButton = newCard.querySelector(".element-card__heart");
-	likeButton.addEventListener("click", function () {
-		likeButton.classList.toggle();
+	likeButton.addEventListener("click", () => {
+		likeButton.classList.toggle("element-card__heart_active");
 	});
-	// const addFragment = document.createDocumentFragment();
-	// let addClone = document.importNode(template, true);
-	// addFragment.appendChild(addClone);
+	imageCard.addEventListener("click", () => {
+		const emergentCard = document.querySelector(".addEmergent");
+		const emergeImage = emergentCard.querySelector(".addEmergent__image");
+		emergeImage.src = image;
+		emergentCard.classList.remove("addEmergent_oppened");
+	});
 
-	// const titleInput = document.querySelector(".input__title");
-	// const imageInput = document.querySelector(".input__image");
-	// const addCardTitle = document.getElementById("addCardTitle");
-	// const addCardImage = document.getElementById("addCardImage");
-	// addCardTitle.textContent = titleInput.value;
-	// addCardImage.src = imageInput.value;
+	// imageCard.addEventListener("click", () => {
+	// 	const emergentCard = document
+	// 		.querySelector("#template-emergent")
+	// 		.cloneNode(true)
+	// 		.content.querySelector(".addEmergent");
+	// 	const emergeImage = emergentCard.querySelector(".addEmergent__image");
+	// 	emergeImage.src = image;
+	// 	return emergentCard;
+	// });
 	return newCard;
 }
-
+// function ventana(image) {
+// 	const emergentCard = document
+// 		.querySelector("#template-emergent")
+// 		.cloneNode(true)
+// 		.content.querySelector(".addEmergent");
+// 	const emergeImage = emergentCard.querySelector(".addEmergent__image");
+// 	emergeImage.src = image;
+// 	return emergentCard;
+// }
 const titleInput = document.querySelector(".input__title");
 const imageInput = document.querySelector(".input__image");
 addPopup.addEventListener("submit", function (evt) {
@@ -157,16 +162,3 @@ addPopup.addEventListener("submit", function (evt) {
 	const cardCreated = addCard(titleInput.value, imageInput.value);
 	element.prepend(cardCreated);
 });
-submitButtonForm.addEventListener("click", closeAddForm);
-
-//BOORANDO LA CARD
-//funcion para borrarlo
-
-// const removeCard = document.getElementById("remove-card");
-// function deleteCard() {
-// 	removeCard.remove();
-// }
-
-// const cardTrash = document
-// 	.getElementById("cardTrash")
-// 	.addEventListener("click", deleteCard);

@@ -1,0 +1,19 @@
+.addEmergent {
+  position: absolute;
+  top: 50%;
+  max-height: 75vh;
+  max-width: 75vw;
+}
+
+.addEmergent_oppened {
+  display: none;
+}
+
+.addEmergent__close-icon {
+  width: 20px;
+}
+
+.addEmergent__image {
+  max-width: 75vw;
+  max-height: 75vh;
+}

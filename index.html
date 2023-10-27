@@ -28,7 +28,6 @@
             </div>
             <button class="profile__button-add">+</button>
           </section>
-
           <section id="main-element" class="element">
             <template id="template-cards">
               <article class="element-card">
@@ -38,12 +37,18 @@
                 </div>
                 <div class="element-card__container">
                   <h2 id="addCardTitle" class="element-card__title"></h2>
-                  <img class="element-card__heart" src="images/heart.svg" alt="heart">
+                  <img class="element-card__heart " src="images/heart.svg" alt="heart">
                 </div>
               </article>
             </template>
           </section>
 
+          <!-- <template id="template-emergent"> -->
+          <section class="addEmergent addEmergent_oppened">
+            <button class="addEmergent__close-icon">x</button>
+            <img class="addEmergent__image" alt="picture">
+          </section>
+          <!-- </template> -->
         </main>
         <footer class="footer">© 2020 Mesto Russia</footer>
       </div>
@@ -72,6 +77,8 @@
             </fieldset>
           </form>
         </section>
+
+
       </div>
     </div>
     <script src="script.js"></script>

@@ -3,5 +3,46 @@
   height: 17.625rem;
   border-radius: 0.5rem 0.5rem 0 0;
   object-fit: cover;
+  transition: 0.3s;
+}
+
+/* .element-card__image_active {
+  position: absolute;
+  width: 70vw;
+  height: 60vh;
+  object-fit: cover;
+  transition: 0.3s;
+
+} */
+
+/* .ventana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+/* .popup-emergent {
+  width: 75vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
 
 }
+
+.popup-emergent_close {
+  width: 3.125rem;
+  align-self: flex-end;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-size: 3.125rem;
+  font-weight: 100;
+  margin: 0 1.563rem 0 0;
+}
+
+.popup-emergent__image {
+  width: 80%;
+}
+
+.popup-emergent_open { */
+/* display: none;
+} */
