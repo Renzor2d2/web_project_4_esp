@@ -56,6 +56,7 @@ function closeAddForm() {
 }
 
 closeIconAdd.addEventListener("click", closeAddForm);
+submitButtonForm.addEventListener("click", closeAddForm);
 
 const initialCards = [
 	{
