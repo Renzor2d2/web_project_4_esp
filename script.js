@@ -87,39 +87,23 @@ const initialCards = [
 const main = document.querySelector(".main");
 const element = document.querySelector(".element");
 const elementCard = document.querySelector(".element-card");
-// const cardTitle = document.querySelector(".element-card__title");
-// const cardImage = document.querySelector(".element-card__image");
 
-// agregando las cards
 initialCards.forEach(function (item) {
 	const initialCard = addCard(item.name, item.link);
 	element.append(initialCard);
 });
-//
 
 function addCard(title, image) {
-	//
-
-	// const emergentCard = document
-	// 	.querySelector("#template-emergent")
-	// 	.cloneNode(true)
-	// 	.content.querySelector(".addEmergent");
-	// const emergeImage = emergentCard.querySelector(".addEmergent__image");
-	// emergeImage.src = image;
-
-	//
 	const newCard = document
 		.querySelector("#template-cards")
 		.cloneNode(true)
 		.content.querySelector(".element-card");
-	// console.log(newCard);
 
 	const titleCard = newCard.querySelector(".element-card__title");
 	titleCard.textContent = title;
 	const imageCard = newCard.querySelector(".element-card__image");
 	imageCard.src = image;
 
-	///
 	const trashButton = newCard.querySelector(".element-card__trash");
 	trashButton.addEventListener("click", () => {
 		newCard.remove();
@@ -128,33 +112,21 @@ function addCard(title, image) {
 	likeButton.addEventListener("click", () => {
 		likeButton.classList.toggle("element-card__heart_active");
 	});
+	const emergentCard = document.querySelector(".addEmergent");
+	const emergeImage = emergentCard.querySelector(".addEmergent__image");
 	imageCard.addEventListener("click", () => {
-		const emergentCard = document.querySelector(".addEmergent");
-		const emergeImage = emergentCard.querySelector(".addEmergent__image");
+		// const emergentCard = document.querySelector(".addEmergent");
+		// const emergeImage = emergentCard.querySelector(".addEmergent__image");
 		emergeImage.src = image;
 		emergentCard.classList.remove("addEmergent_oppened");
 	});
-
-	// imageCard.addEventListener("click", () => {
-	// 	const emergentCard = document
-	// 		.querySelector("#template-emergent")
-	// 		.cloneNode(true)
-	// 		.content.querySelector(".addEmergent");
-	// 	const emergeImage = emergentCard.querySelector(".addEmergent__image");
-	// 	emergeImage.src = image;
-	// 	return emergentCard;
-	// });
+	const emergeClose = emergentCard.querySelector(".addEmergent__close-icon");
+	emergeClose.addEventListener("click", () => {
+		emergentCard.classList.add("addEmergent_oppened");
+	});
 	return newCard;
 }
-// function ventana(image) {
-// 	const emergentCard = document
-// 		.querySelector("#template-emergent")
-// 		.cloneNode(true)
-// 		.content.querySelector(".addEmergent");
-// 	const emergeImage = emergentCard.querySelector(".addEmergent__image");
-// 	emergeImage.src = image;
-// 	return emergentCard;
-// }
+
 const titleInput = document.querySelector(".input__title");
 const imageInput = document.querySelector(".input__image");
 addPopup.addEventListener("submit", function (evt) {
