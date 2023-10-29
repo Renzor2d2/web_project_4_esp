@@ -113,17 +113,21 @@ function addCard(title, image) {
 	likeButton.addEventListener("click", () => {
 		likeButton.classList.toggle("element-card__heart_active");
 	});
+
 	const emergentCard = document.querySelector(".addEmergent");
-	const emergeImage = emergentCard.querySelector(".addEmergent__image");
+
 	imageCard.addEventListener("click", () => {
-		// const emergentCard = document.querySelector(".addEmergent");
-		// const emergeImage = emergentCard.querySelector(".addEmergent__image");
+		const emergeImage = emergentCard.querySelector(".addEmergent__image");
 		emergeImage.src = image;
+		const emergeTitle = emergentCard.querySelector(".addEmergent__title");
+		emergeTitle.textContent = title;
 		emergentCard.classList.remove("addEmergent_oppened");
+		page.classList.add("page_opacity");
 	});
 	const emergeClose = emergentCard.querySelector(".addEmergent__close-icon");
 	emergeClose.addEventListener("click", () => {
 		emergentCard.classList.add("addEmergent_oppened");
+		page.classList.remove("page_opacity");
 	});
 	return newCard;
 }
@@ -134,4 +138,6 @@ addPopup.addEventListener("submit", function (evt) {
 	evt.preventDefault();
 	const cardCreated = addCard(titleInput.value, imageInput.value);
 	element.prepend(cardCreated);
+	titleInput.value = "";
+	imageInput.value = "";
 });

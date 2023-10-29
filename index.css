@@ -3,6 +3,7 @@
 @import url(./BLOCKS/body/body.css);
 @import url(./BLOCKS/page/page.css);
 @import url(./BLOCKS/page/_opacity/page_opacity.css);
+@import url(./BLOCKS/Fade-in/fade-in.css);
 
 @import url(./BLOCKS/main/main.css);
 @import url(./BLOCKS/header/__line/header__line.css);

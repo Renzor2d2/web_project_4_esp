@@ -1,8 +1,12 @@
 .addEmergent {
-  position: absolute;
+  position: fixed;
   top: 10%;
-  max-height: 75vh;
   max-width: 75vw;
+  max-height: 75vh;
+  animation: fade-in 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .addEmergent_oppened {
@@ -10,10 +14,27 @@
 }
 
 .addEmergent__close-icon {
-  width: 20px;
+  align-self: flex-end;
+  width: 2.125rem;
+  align-self: flex-end;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-size: 2.125rem;
+  font-weight: 100;
+
+
 }
 
 .addEmergent__image {
+  object-fit: contain;
   max-width: 75vw;
   max-height: 75vh;
+}
+
+
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
