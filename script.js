@@ -89,7 +89,7 @@ const main = document.querySelector(".main");
 const element = document.querySelector(".element");
 const elementCard = document.querySelector(".element-card");
 
-initialCards.forEach(function (item) {
+initialCards.forEach((item) => {
 	const initialCard = addCard(item.name, item.link);
 	element.append(initialCard);
 });

@@ -48,6 +48,11 @@
 @import url(./BLOCKS/addform/addpopup/addpopup-container/input/__title/input__title.css);
 @import url(./BLOCKS/addform/addpopup/addpopup-container/input/__submit-form/input__submit-form.css);
 
+@import url(./BLOCKS/popups/popups.css);
 @import url(./BLOCKS/addEmergent/addEmergent.css);
+@import url(./BLOCKS/addEmergent/_oppened/addEmergent_oppened.css);
+@import url(./BLOCKS/addEmergent/addEmergent__image/addEmergent__image.css);
+@import url(./BLOCKS/addEmergent/__close-icon/addEmergent__close-icon.css);
+
 
 @import url(./BLOCKS/footer/footer.css);
