@@ -4,4 +4,9 @@
   color: white;
   margin: 1.563rem 0 1.563rem 0;
   height: 3.125rem;
+  transition: 0.2s;
+}
+
+.input__submit:active {
+  transform: scale(1.1);
 }
