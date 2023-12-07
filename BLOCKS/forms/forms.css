@@ -1,0 +1,38 @@
+.forms {
+  position: fixed;
+  top: 20%;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (min-width: 220px) {
+  .forms {
+    max-width: 85vw;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .forms {
+    max-width: 55vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .forms {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .forms {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .forms {
+    max-width: 25vw;
+  }
+}

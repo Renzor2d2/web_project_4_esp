@@ -1,0 +1,15 @@
+.input__submit {
+  background-color: black;
+  width: 100%;
+  color: white;
+  height: 3.125rem;
+  transition: 0.2s;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* .input__submit:active {
+  transform: scale(1.1);
+} */
+.input__submit_disabled {
+  background-color: gray;
+}

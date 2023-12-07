@@ -1,0 +1,10 @@
+.addpopup__close-icon {
+  width: 3.125rem;
+  align-self: flex-end;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-size: 2.125rem;
+  font-weight: 100;
+  padding-left: 9rem;
+}

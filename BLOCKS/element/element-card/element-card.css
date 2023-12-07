@@ -1,0 +1,9 @@
+.element-card {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  border-radius: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}

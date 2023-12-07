@@ -1,0 +1,9 @@
+.form {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 1s;
+  max-width: 100%;
+}

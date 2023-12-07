@@ -1,0 +1,12 @@
+.element-card__trash {
+  width: 1rem;
+  position: absolute;
+  margin: 0.625rem;
+  transition: 0.3s;
+
+}
+
+.element-card__trash:hover {
+  transform: scale(1.3);
+
+}

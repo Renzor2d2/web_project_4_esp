@@ -1,0 +1,8 @@
+.element-card__container-one {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.element-card__container-one_created {
+  background-color: black;
+}
