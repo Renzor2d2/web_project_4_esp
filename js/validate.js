@@ -89,7 +89,7 @@ const settings = {
 	submitButtonSelector: ".input__submit",
 	inactiveButtonClass: "input__submit_disabled",
 	// inputErrorClass: "input__element_type_error",
-	errorClass: "input__element-error_active",
+	errorClass: "input-error_active",
 };
 enableValidation(settings);
 
