@@ -22,13 +22,13 @@ console.log(inputElement);
 const showInputError = (formElement, inputElement, errorMessage) => {
 	console.log(errorMessage);
 	const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-	errorElement.classList.add("input-error_active");
+	errorElement.classList.add(settings.errorClass);
 	errorElement.textContent = errorMessage;
 };
 
 const hideInputError = (formElement, inputElement) => {
 	const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-	errorElement.classList.remove("input-error_active");
+	errorElement.classList.remove(settings.errorClass);
 	errorElement.textContent = "";
 };
 
@@ -47,18 +47,20 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, submitButton) => {
 	if (hasInvalidInput(inputList)) {
-		submitButton.classList.add("input__submit_disabled");
+		submitButton.classList.add(settings.inactiveButtonClass);
 		submitButton.setAttribute("disabled", true);
 	} else {
-		submitButton.classList.remove("input__submit_disabled");
+		submitButton.classList.remove(settings.inactiveButtonClass);
 
 		submitButton.removeAttribute("disabled", true);
 	}
 };
 
 const setEventListeners = (formElement) => {
-	const inputList = Array.from(formElement.querySelectorAll(".input__element"));
-	const submitButton = formElement.querySelector(".input__submit");
+	const inputList = Array.from(
+		formElement.querySelectorAll(settings.inputSelector)
+	);
+	const submitButton = formElement.querySelector(settings.submitButtonSelector);
 	console.log(inputList);
 	toggleButtonState(inputList, submitButton);
 	inputList.forEach((inputElement) => {
@@ -70,7 +72,7 @@ const setEventListeners = (formElement) => {
 };
 
 const enableValidation = () => {
-	const formList = Array.from(document.querySelectorAll(".form"));
+	const formList = Array.from(document.querySelectorAll(settings.formSelector));
 	console.log(formList);
 	formList.forEach((formElement) => {
 		formElement.addEventListener("submit", (evt) => {
@@ -86,7 +88,7 @@ const settings = {
 	inputSelector: ".input__element",
 	submitButtonSelector: ".input__submit",
 	inactiveButtonClass: "input__submit_disabled",
-	inputErrorClass: "input__element_type_error",
+	// inputErrorClass: "input__element_type_error",
 	errorClass: "input__element-error_active",
 };
 enableValidation(settings);
