@@ -93,7 +93,7 @@ const settings = {
 };
 enableValidation(settings);
 
-document.addEventListener(
+const esc = document.addEventListener(
 	"keydown",
 	function (evt) {
 		if (evt.keyCode === 27) {
