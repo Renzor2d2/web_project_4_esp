@@ -5,6 +5,7 @@
   height: 3.125rem;
   transition: 0.2s;
   margin: 1rem 0 0.5rem 0;
+  cursor: pointer;
 }
 
 /* .input__submit:active {
