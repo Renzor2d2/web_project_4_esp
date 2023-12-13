@@ -21,13 +21,11 @@ function openEditProfile() {
 	popup.classList.remove("popup_oppened");
 	page.classList.add("page_opacity");
 	const addEvent = document.addEventListener("keydown", Events);
-	console.log(openEditProfile);
 }
 function closeEditProfile() {
 	popup.classList.add("popup_oppened");
 	page.classList.remove("page_opacity");
 	const removeEvent = document.removeEventListener("keydown", Events);
-	console.log(closeEditProfile);
 }
 
 profileButton.addEventListener("click", openEditProfile);
