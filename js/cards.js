@@ -44,6 +44,7 @@ function addCard(title, image) {
 	titleCard.textContent = title;
 	const imageCard = newCard.querySelector(".element-card__image");
 	imageCard.src = image;
+	imageCard.alt = title;
 	const cardCreated = newCard.querySelector(".element-card__container-one");
 
 	cardCreated.classList.add("element-card__container-one_created");
@@ -62,18 +63,19 @@ function addCard(title, image) {
 	imageCard.addEventListener("click", () => {
 		const emergeImage = emergentCard.querySelector(".addEmergent__image");
 		emergeImage.src = image;
+		emergeImage.alt = title;
 		const emergeTitle = emergentCard.querySelector(".addEmergent__title");
 		emergeTitle.textContent = title;
-		emergentCard.classList.remove("addEmergent_oppened");
-		page.classList.add("page_opacity");
+		openEmergent();
 	});
+
 	const emergeClose = emergentCard.querySelector(".addEmergent__close-icon");
 	emergeClose.addEventListener("click", () => {
-		emergentCard.classList.add("addEmergent_oppened");
-		page.classList.remove("page_opacity");
+		closeEmergent();
 	});
 	return newCard;
 }
+
 const newPlace = document.forms.newPlace;
 
 const inputTitle = document.getElementById("input-title");
