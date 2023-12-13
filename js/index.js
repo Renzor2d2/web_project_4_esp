@@ -10,7 +10,7 @@ const addOpen = addPopup.querySelector(".addpopup_oppened");
 const submitButtonForm = document.getElementById("newButton");
 
 const Events = function removePopups(evt) {
-	if (evt.keyCode === 27) {
+	if ((evt.key = 27)) {
 		closeEditProfile();
 		closeAddForm();
 	}
@@ -54,7 +54,7 @@ page.addEventListener("mousedown", closeAddForm);
 
 ///popup EmergentWindow
 const eventEmergent = function removeEmergent(evt) {
-	if (evt.keyCode === 27) {
+	if ((evt.key = 27)) {
 		closeEmergent();
 	}
 };
