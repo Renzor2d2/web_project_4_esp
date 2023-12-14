@@ -9,13 +9,13 @@ const closeIconAdd = addPopup.querySelector(".addpopup__close-icon");
 const addOpen = addPopup.querySelector(".addpopup_oppened");
 const submitButtonForm = document.getElementById("newButton");
 
-const Events = function removePopups(evt) {
-	if ((evt.key = 27)) {
+const Events = document.addEventListener("keydown", function (evt) {
+	if (evt.key === "Escape") {
 		closeEditProfile();
 		closeAddForm();
+		closeEmergent();
 	}
-};
-
+});
 //Popup EditProfile
 function openEditProfile() {
 	popup.classList.remove("popup_oppened");
@@ -51,24 +51,16 @@ submitButtonForm.addEventListener("click", closeAddForm);
 page.addEventListener("mousedown", closeAddForm);
 
 ///popup EmergentWindow
-const eventEmergent = function removeEmergent(evt) {
-	if ((evt.key = 27)) {
-		closeEmergent();
-	}
-};
 function openEmergent() {
 	const emergentCard = document.querySelector(".addEmergent");
 	emergentCard.classList.remove("addEmergent_oppened");
 	page.classList.add("page_opacity");
-	const addEventEmergent = document.addEventListener("keydown", eventEmergent);
+	const addEventEmergent = document.addEventListener("keydown", Events);
 }
 function closeEmergent() {
 	const emergentCard = document.querySelector(".addEmergent");
 	emergentCard.classList.add("addEmergent_oppened");
 	page.classList.remove("page_opacity");
-	const removeEventEmergent = document.removeEventListener(
-		"keydown",
-		eventEmergent
-	);
+	const removeEventEmergent = document.removeEventListener("keydown", Events);
 }
 page.addEventListener("mousedown", closeEmergent);
