@@ -13,7 +13,7 @@ const Events = document.addEventListener("keydown", function (evt) {
 	if (evt.key === "Escape") {
 		closeEditProfile();
 		closeAddForm();
-		closeEmergent();
+		// closeEmergent();
 	}
 });
 //Popup EditProfile
@@ -51,16 +51,16 @@ submitButtonForm.addEventListener("click", closeAddForm);
 page.addEventListener("mousedown", closeAddForm);
 
 ///popup EmergentWindow
-function openEmergent() {
-	const emergentCard = document.querySelector(".addEmergent");
-	emergentCard.classList.remove("addEmergent_oppened");
-	page.classList.add("page_opacity");
-	const addEventEmergent = document.addEventListener("keydown", Events);
-}
-function closeEmergent() {
-	const emergentCard = document.querySelector(".addEmergent");
-	emergentCard.classList.add("addEmergent_oppened");
-	page.classList.remove("page_opacity");
-	const removeEventEmergent = document.removeEventListener("keydown", Events);
-}
-page.addEventListener("mousedown", closeEmergent);
+// function openEmergent() {
+// 	const emergentCard = document.querySelector(".addEmergent");
+// 	emergentCard.classList.remove("addEmergent_oppened");
+// 	page.classList.add("page_opacity");
+// 	const addEventEmergent = document.addEventListener("keydown", Events);
+// }
+// function closeEmergent() {
+// 	const emergentCard = document.querySelector(".addEmergent");
+// 	emergentCard.classList.add("addEmergent_oppened");
+// 	page.classList.remove("page_opacity");
+// 	const removeEventEmergent = document.removeEventListener("keydown", Events);
+// }
+// page.addEventListener("mousedown", closeEmergent);
